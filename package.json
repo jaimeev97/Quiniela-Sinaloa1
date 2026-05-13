@@ -1,0 +1,18 @@
+function reiniciarQuiniela() {
+      if (confirm("¿Estás seguro de que quieres borrar todos tus pronósticos?")) {
+              // Limpiar el arreglo de selecciones
+                      selecciones.fill(null);
+                              
+                                      // Quitar la clase 'active' de todos los botones
+                                              const botones = document.querySelectorAll('.btn-opc');
+                                                      botones.forEach(btn => btn.classList.remove('active'));
+                                                              
+                                                                      // Limpiar los inputs
+                                                                              document.getElementById('nombre').value = "";
+                                                                                      document.getElementById('goles').value = "";
+                                                                                              
+                                                                                                      // Desplazar hacia arriba para empezar de nuevo
+                                                                                                              window.scrollTo({ top: 0, behavior: 'smooth' });
+                                                                                                                  }
+                                                                                                                  }
+}
